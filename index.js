@@ -30,9 +30,9 @@ const Calculator = {
 let actionApplyer = function(start, ray) {
   let a = start
 
-  for (let i = 0; i < ray.length; i++ ){
-    a = ray[i](a)
-  }
+  ray.forEach(function(rayd){
+    a = rayd(a)    
+  })
 
   return a
 }
